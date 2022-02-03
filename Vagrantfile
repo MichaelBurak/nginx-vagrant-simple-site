@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.33.10"
 
+  # Copy file from source directory to /tmp/ on VM.
   config.vm.provision "file", source: "./simple-site", destination: "/tmp/"
 
   # Provisioning with a shell script. 
