@@ -60,6 +60,8 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
 
+  config.vm.provision "file", source: "./simple-site", destination: "/tmp/"
+
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
@@ -69,9 +71,9 @@ Vagrant.configure("2") do |config|
     mkdir -p /var/www/simple-site/html
     touch /var/www/simple-site/html/index.html
     echo '<h1>Hello World</h1>' >> /var/www/simple-site/html/index.html
-    # touch /etc/nginx/sites-available/simple-site
-    # ufw allow 81 
-    # sudo ln -s /etc/nginx/sites-available/simple-site /etc/nginx/sites-enabled/
-    # systemctl restart nginx
+    cp /tmp/simple-site /etc/nginx/sites-available/
+    ufw allow 81 
+    sudo ln -s /etc/nginx/sites-available/simple-site /etc/nginx/sites-enabled/
+    service nginx restart
   SHELL
 end
