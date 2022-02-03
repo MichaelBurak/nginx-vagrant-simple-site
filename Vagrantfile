@@ -66,5 +66,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get install -y nginx
+    mkdir -p /var/www/simple-site/html
+    touch /var/www/simple-site/html/index.html
+    echo '<h1>Hello World</h1>' >> /var/www/simple-site/html/index.html
+    # touch /etc/nginx/sites-available/simple-site
+    # ufw allow 81 
+    # sudo ln -s /etc/nginx/sites-available/simple-site /etc/nginx/sites-enabled/
+    # systemctl restart nginx
   SHELL
 end
