@@ -1,8 +1,8 @@
 server {
     listen 81; # port on localhost;
     
-    root "/var/www/simple-site/html";
-    index index.html;
+    root "/var/www/simple-site/html"; # where to find the html file(s)
+    index index.html; # the main file to serve up at landing point 
 
     server_name _; # underscore to get around not having a domain
 
