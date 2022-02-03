@@ -30,6 +30,8 @@ This is a simple project to:
 - Access the hello world at ` http://192.168.33.10:81/ ` 
 
 ## TO-DOs
+- Could use config.vm.synced_folder to not have to upload --> copy the file 
+- Deploy analogous solution to the cloud
 
 ## Lessons Learned / Observations
 - Systemctl vs. other ways of managing services: https://allthings.how/how-to-fix-systemctl-command-not-found-error-in-linux/
