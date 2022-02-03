@@ -32,12 +32,13 @@ This is a simple project to:
 ## TO-DOs
 - Could use config.vm.synced_folder to not have to upload --> copy the file 
 - Deploy analogous solution to the cloud
+- Incorporate a non-Vagrant shell provisioner like Ansible to configure the server
 
 ## Lessons Learned / Observations
 - Systemctl vs. other ways of managing services: https://allthings.how/how-to-fix-systemctl-command-not-found-error-in-linux/
 - Setting up nginx was mostly complicated by not knowing server blocks, but those are simple once you start to work with the config files. 
--
+
 ## Resources
-https://devopscube.com/vagrant-tutorial-beginners/
-https://jgefroh.medium.com/a-guide-to-using-nginx-for-static-websites-d96a9d034940
-https://stackoverflow.com/questions/65329229/multiple-site-on-localhost-served-by-nginx-without-domain-name
+- https://devopscube.com/vagrant-tutorial-beginners/
+- https://jgefroh.medium.com/a-guide-to-using-nginx-for-static-websites-d96a9d034940
+- https://stackoverflow.com/questions/65329229/multiple-site-on-localhost-served-by-nginx-without-domain-name
