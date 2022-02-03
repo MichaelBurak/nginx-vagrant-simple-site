@@ -1,0 +1,12 @@
+server {
+    listen 81; # port on localhost;
+    
+    root "/var/www/simple-site/html";
+    index index.html;
+
+    server_name _; # underscore to get around not having a domain
+
+    location / {
+                try_files $uri $uri/ =404;
+        }
+}
